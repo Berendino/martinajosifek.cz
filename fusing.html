@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fusing – tavení skla v peci a tvorba jedinečných skleněných objektů. Šperky, mísy, dekorace. Martina Josífek Zelínková.">
+  <title>Fusing – MJZ Mozaiky</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">MJZ <span>Mozaiky</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Úvod</a></li>
+        <li><a href="mikromozaika.html">Mikromozaika</a></li>
+        <li><a href="mozaika.html">Mozaika</a></li>
+        <li><a href="vitraz.html">Vitráž</a></li>
+        <li><a href="fusing.html" class="active">Fusing</a></li>
+        <li><a href="kurzy.html">Kurzy</a></li>
+        <li><a href="index.html#gallery">Galerie</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="subpage-content">
+    <div class="container">
+      <h1><em>Fusing</em></h1>
+      <p>
+        Fusing je technika tavení skla v peci při teplotách okolo 800 °C. Jednotlivé kousky barevného skla se skládají na sebe a poté se v peci slijí v jeden celek. Výsledkem jsou jedinečné skleněné objekty s hladkým povrchem a zářivými barvami.
+      </p>
+      <p>
+        Tato technika umožňuje vytvářet širokou škálu výrobků – od šperků a drobných dekorací po mísy, talíře a velkoformátové skleněné panely. Každý kus je originál, protože proces tavení nikdy nevytvoří dva identické výsledky.
+      </p>
+    </div>
+  </section>
+
+  <section class="gallery" style="padding-top: 0;">
+    <div class="container">
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">MJZ <span>Mozaiky</span></div>
+        <div class="footer-links">
+          <a href="index.html">Úvod</a>
+          <a href="mikromozaika.html">Mikromozaika</a>
+          <a href="mozaika.html">Mozaika</a>
+          <a href="vitraz.html">Vitráž</a>
+          <a href="fusing.html">Fusing</a>
+          <a href="kurzy.html">Kurzy</a>
+          <a href="index.html#gallery">Galerie</a>
+          <a href="index.html#contact">Kontakt</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Martina Josífek Zelínková – Mozaiky. Všechna práva vyhrazena.</p>
+        <p>Tvorba webu: <a href="https://berenda-design.cz/" target="_blank" rel="noopener">Berenda Design</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.js?v=3"></script>
+  <script>
+    const navHamburger = document.getElementById('navHamburger');
+    const navLinks = document.getElementById('navLinks');
+    navHamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      navHamburger.classList.toggle('active');
+    });
+
+    const galleryGrid = document.getElementById('galleryGrid');
+    const filtered = products.filter(p => p.category === 'fusing');
+    galleryGrid.innerHTML = filtered.map(product => `
+      <a href="product.html?id=${product.id}" class="product-card">
+        <div class="product-card-image" style="background: ${product.gradient};">
+          <div class="product-card-overlay">
+            <span>Zobrazit detail →</span>
+          </div>
+        </div>
+        <div class="product-card-info">
+          <h3>${product.title}</h3>
+          <p>${product.shortDesc}</p>
+          <span class="card-tag">${product.tag}</span>
+        </div>
+      </a>
+    `).join('');
+  </script>
+</body>
+</html>

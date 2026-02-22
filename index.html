@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Martina Josífek Zelínková – Ruční tvorba uměleckých mozaik. Originální mozaikové obrazy, dekorace a zakázková výroba z kvalitních materiálů.">
+  <meta name="keywords" content="mozaika, umělecká mozaika, ruční práce, dekorace, mozaikové obrazy, zakázková výroba">
+  <title>Martina Josífek Zelínková – Mozaiky</title>
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">MJZ <span>Mozaiky</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Úvod</a></li>
+        <li><a href="mikromozaika.html">Mikromozaika</a></li>
+        <li><a href="mozaika.html">Mozaika</a></li>
+        <li><a href="vitraz.html">Vitráž</a></li>
+        <li><a href="fusing.html">Fusing</a></li>
+        <li><a href="kurzy.html">Kurzy</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" style="background-image: url('images/mozaika.webp');"></div>
+    <div class="hero-mosaic-pattern"></div>
+    <div class="hero-content">
+      <p class="section-subtitle">Umělecká mozaika</p>
+      <h1>Ručně vyráběné <em>mozaiky</em></h1>
+      <p class="hero-description">
+        Ručně tvořené obrazy a dekorace s využitím tradičních postupů italského mistra Giulia Menossiho. Originální umění, které do vašeho interiéru vnese dotek mistrovského řemesla.
+      </p>
+      <div class="hero-buttons">
+        <a href="#gallery" class="btn btn-primary">Prohlédnout galerii</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="images/kontakt.webp" alt="Martina Josífek Zelínková">
+        </div>
+        <div class="about-text reveal reveal-delay-1">
+          <p class="section-subtitle">O mně</p>
+          <h2>"Světlo je mým <em>plátnem</em>"</h2>
+          <p>
+            Jsem Martina Josífek Zelinková, brusička skla a mozaikářka z Jizerských hor. Ve své tvorbě propojuji Tiffany techniku, mikromozaiku i tradiční skleněné korálky s drahými kameny a recyklovanou keramikou.
+          </p>
+          <p>
+            Zkušenosti od italského mistra Giulia Menossiho promítám do zakázkových děl i do obnovy výzdoby opuštěných kapliček, čímž s úctou k historii oživuji odkaz našich předků.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">✦</div>
+              <div>
+                <h4>Ruční práce</h4>
+                <p>Každý dílek je ručně řezán a osazen</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">◈</div>
+              <div>
+                <h4>Kvalitní materiály</h4>
+                <p>Sklo, přírodní kámen, keramika</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">❖</div>
+              <div>
+                <h4>Originální design</h4>
+                <p>Každé dílo je unikátní originál</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">✧</div>
+              <div>
+                <h4>Zakázková tvorba</h4>
+                <p>Mozaiky na míru podle vašich přání</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery-header reveal">
+        <p class="section-subtitle">Galerie</p>
+        <h2 class="section-title">Moje práce</h2>
+        <p class="section-description">
+          Výběr z mých mozaikových děl – od dekorativních obrazů po funkční umělecké předměty. Každá mozaika je originál vytvořený s péčí o každý detail.
+        </p>
+      </div>
+
+      <div class="gallery-filters reveal">
+        <button class="filter-btn active" data-filter="all">Vše</button>
+        <button class="filter-btn" data-filter="mikromozaika">Mikromozaika</button>
+        <button class="filter-btn" data-filter="mozaika">Mozaika</button>
+        <button class="filter-btn" data-filter="vitraz">Vitráž</button>
+        <button class="filter-btn" data-filter="fusing">Fusing</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Products are rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="gallery-header reveal">
+        <p class="section-subtitle">Jak vzniká mozaika</p>
+        <h2 class="section-title">Od nápadu k umění</h2>
+        <p class="section-description">
+          Každé dílo prochází pečlivým procesem, kde se řemeslo setkává s kreativitou.
+        </p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal reveal-delay-1">
+          <div class="process-step-number">01</div>
+          <div class="process-step-icon">💬</div>
+          <h3>Konzultace</h3>
+          <p>Společně probereme vaše představy, rozměry, barevnost a umístění budoucí mozaiky.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="process-step-number">02</div>
+          <div class="process-step-icon">✏️</div>
+          <h3>Návrh</h3>
+          <p>Připravím grafický návrh mozaiky včetně výběru materiálů a barevných kombinací.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="process-step-number">03</div>
+          <div class="process-step-icon">🔨</div>
+          <h3>Tvorba</h3>
+          <p>Ručně řežu, tvaruji a skládám jednotlivé dílky do finální podoby mozaiky.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+          <div class="process-step-number">04</div>
+          <div class="process-step-icon">🎁</div>
+          <h3>Předání</h3>
+          <p>Hotovou mozaiku pečlivě zabalím a předám – případně zajistím i instalaci.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="section-subtitle">Kontakt</p>
+          <h2>Máte zájem o <em>mozaiku?</em></h2>
+          <p>Neváhejte mě kontaktovat s jakýmkoliv dotazem nebo poptávkou. Ráda vám poradím a společně najdeme ideální řešení pro váš prostor.</p>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📧</div>
+              <div>
+                <h4>E-mail</h4>
+                <a href="mailto:info@mozaiky-mjz.cz">info@mozaiky-mjz.cz</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📱</div>
+              <div>
+                <h4>Telefon</h4>
+                <a href="tel:+420724701202">+420 724 701 202</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div>
+                <h4>Lokalita</h4>
+                <p>Popelnická 618, 46841 Tanvald - Šumburk nad Desnou</p>
+              </div>
+            </div>
+          </div>
+          <a href="#gallery" class="btn btn-primary" style="margin-top: 2rem;">Prohlédnout si moji práci →</a>
+        </div>
+        <div class="contact-photo reveal reveal-delay-1">
+          <img src="images/mozaika_orel.webp" alt="Mozaikový orel">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">MJZ <span>Mozaiky</span></div>
+        <div class="footer-links">
+          <a href="index.html">Úvod</a>
+          <a href="mikromozaika.html">Mikromozaika</a>
+          <a href="mozaika.html">Mozaika</a>
+          <a href="vitraz.html">Vitráž</a>
+          <a href="fusing.html">Fusing</a>
+          <a href="kurzy.html">Kurzy</a>
+          <a href="#gallery">Galerie</a>
+          <a href="#contact">Kontakt</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Martina Josífek Zelínková – Mozaiky. Všechna práva vyhrazena.</p>
+        <p>Tvorba webu: <a href="https://berenda-design.cz/" target="_blank" rel="noopener">Berenda Design</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.js?v=3"></script>
+  <script src="script.js?v=3"></script>
+</body>
+</html>

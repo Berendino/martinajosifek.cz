@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kurzy mozaiky a práce se sklem – workshopy pro začátečníky i pokročilé. Naučte se tvořit mozaiku, vitráž nebo fusing. Martina Josífek Zelínková.">
+  <title>Kurzy – MJZ Mozaiky</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">MJZ <span>Mozaiky</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Úvod</a></li>
+        <li><a href="mikromozaika.html">Mikromozaika</a></li>
+        <li><a href="mozaika.html">Mozaika</a></li>
+        <li><a href="vitraz.html">Vitráž</a></li>
+        <li><a href="fusing.html">Fusing</a></li>
+        <li><a href="kurzy.html" class="active">Kurzy</a></li>
+        <li><a href="index.html#gallery">Galerie</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="subpage-content">
+    <div class="container">
+      <h1><em>Kurzy</em></h1>
+      <p>
+        Nabízím kurzy a workshopy, kde si můžete vyzkoušet práci s mozaikou, vitráží nebo fusingem. Kurzy jsou vhodné pro úplné začátečníky i pro ty, kdo si chtějí prohloubit své dovednosti.
+      </p>
+      <p>
+        Každý kurz probíhá v malé skupince, takže se vám mohu věnovat individuálně. Veškerý materiál a nářadí je k dispozici – stačí přijít s chutí tvořit.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">MJZ <span>Mozaiky</span></div>
+        <div class="footer-links">
+          <a href="index.html">Úvod</a>
+          <a href="mikromozaika.html">Mikromozaika</a>
+          <a href="mozaika.html">Mozaika</a>
+          <a href="vitraz.html">Vitráž</a>
+          <a href="fusing.html">Fusing</a>
+          <a href="kurzy.html">Kurzy</a>
+          <a href="index.html#gallery">Galerie</a>
+          <a href="index.html#contact">Kontakt</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Martina Josífek Zelínková – Mozaiky. Všechna práva vyhrazena.</p>
+        <p>Tvorba webu: <a href="https://berenda-design.cz/" target="_blank" rel="noopener">Berenda Design</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navHamburger = document.getElementById('navHamburger');
+    const navLinks = document.getElementById('navLinks');
+    navHamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      navHamburger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail produktu – Martina Josífek Zelínková</title>
+  <link rel="stylesheet" href="styles.css?v=3">
+  <style>
+    /* Product Detail Page Styles */
+    .product-detail {
+      padding-top: calc(var(--nav-height) + 2rem);
+      min-height: 100vh;
+    }
+
+    .product-detail-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+
+    .product-detail-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-detail-tag {
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: rgba(201, 168, 76, 0.08);
+      color: var(--color-accent);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      margin-bottom: 1rem;
+    }
+
+    .product-detail h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    .product-detail-description {
+      color: var(--color-text-muted);
+      font-size: 1.1rem;
+      line-height: 1.9;
+      max-width: 800px;
+      margin-bottom: 3rem;
+    }
+
+    .product-price {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .product-detail-specs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: var(--color-bg-section);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .spec-item {
+      text-align: center;
+    }
+
+    .spec-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-text-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .spec-value {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--color-accent);
+    }
+
+    .product-detail-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      transition: color var(--transition);
+    }
+
+    .back-link:hover {
+      color: var(--color-accent);
+    }
+
+    @media (max-width: 768px) {
+      .product-detail-specs {
+        grid-template-columns: 1fr;
+      }
+      .product-detail-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">MJZ <span>Mozaiky</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Úvod</a></li>
+        <li><a href="mikromozaika.html">Mikromozaika</a></li>
+        <li><a href="mozaika.html">Mozaika</a></li>
+        <li><a href="vitraz.html">Vitráž</a></li>
+        <li><a href="fusing.html">Fusing</a></li>
+        <li><a href="kurzy.html">Kurzy</a></li>
+        <li><a href="index.html#gallery" class="active">Galerie</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== PRODUCT DETAIL ========== -->
+  <section class="product-detail">
+    <div class="container">
+      <a href="index.html#gallery" class="back-link">← Zpět do galerie</a>
+
+      <div id="productContent">
+        <!-- Filled by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">MJZ <span>Mozaiky</span></div>
+        <div class="footer-links">
+          <a href="index.html">Úvod</a>
+          <a href="mikromozaika.html">Mikromozaika</a>
+          <a href="mozaika.html">Mozaika</a>
+          <a href="vitraz.html">Vitráž</a>
+          <a href="fusing.html">Fusing</a>
+          <a href="kurzy.html">Kurzy</a>
+          <a href="index.html#gallery">Galerie</a>
+          <a href="index.html#contact">Kontakt</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Martina Josífek Zelínková – Mozaiky. Všechna práva vyhrazena.</p>
+        <p>Tvorba webu: <a href="https://berenda-design.cz/" target="_blank" rel="noopener">Berenda Design</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== INQUIRY MODAL ========== -->
+  <div class="modal-overlay" id="inquiryModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal" aria-label="Zavřít">&times;</button>
+      <h2>Poptávka díla</h2>
+      <p>Máte zájem o toto dílo? Vyplňte formulář a já se vám brzy ozvu.</p>
+      
+      <form class="contact-form" id="inquiryForm" onsubmit="event.preventDefault(); alert('Děkuji za poptávku. Brzy se vám ozvu.'); document.getElementById('closeModal').click();">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">Jméno *</label>
+            <input type="text" id="firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Příjmení *</label>
+            <input type="text" id="lastName" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Předmět</label>
+          <input type="text" id="subject" readonly style="background: rgba(0,0,0,0.05); cursor: not-allowed; color: var(--color-text-muted);">
+        </div>
+        <div class="form-group">
+          <label for="message">Zpráva *</label>
+          <textarea id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Odeslat poptávku</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="products.js?v=3"></script>
+  <script>
+    // ─── Mobile Menu ──────────────────────────
+    const navHamburger = document.getElementById('navHamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    navHamburger.addEventListener('click', () => {
+      navHamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navHamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ─── Load Product Detail ─────────────────
+    const params = new URLSearchParams(window.location.search);
+    const productId = parseInt(params.get('id'));
+    const product = products.find(p => p.id === productId);
+    const container = document.getElementById('productContent');
+
+    if (product) {
+      document.title = `${product.title} – Martina Josífek Zelínková`;
+
+      container.innerHTML = `
+        <div class="product-detail-image" style="background: ${product.gradient};">
+          <!-- Sem půjde fotka: <img src="images/product-${product.id}.jpg" alt="${product.title}"> -->
+        </div>
+
+        <span class="product-detail-tag">${product.tag}</span>
+        <h1>${product.title}</h1>
+        <div class="product-price">${product.price}</div>
+        <p class="product-detail-description">${product.description}</p>
+
+        <div class="product-detail-specs">
+          <div class="spec-item">
+            <div class="spec-label">Rozměry</div>
+            <div class="spec-value">${product.dimensions}</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Materiál</div>
+            <div class="spec-value">${product.material}</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Technika</div>
+            <div class="spec-value">${product.technique}</div>
+          </div>
+        </div>
+
+        <div class="product-detail-actions">
+          <button id="openModalBtn" class="btn btn-primary">✉ Poptat toto dílo</button>
+          <a href="index.html#gallery" class="btn btn-outline">← Zpět do galerie</a>
+        </div>
+      `;
+
+      // ─── Modal Logic ────────────────────────
+      const openModalBtn = document.getElementById('openModalBtn');
+      const inquiryModal = document.getElementById('inquiryModal');
+      const closeModalBtn = document.getElementById('closeModal');
+      const subjectInput = document.getElementById('subject');
+
+      openModalBtn.addEventListener('click', () => {
+        subjectInput.value = `Poptávka: ${product.title}`;
+        inquiryModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      const closeModal = () => {
+        inquiryModal.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      closeModalBtn.addEventListener('click', closeModal);
+
+      inquiryModal.addEventListener('click', (e) => {
+        if (e.target === inquiryModal) {
+          closeModal();
+        }
+      });
+
+    } else {
+      container.innerHTML = `
+        <h2>Produkt nenalezen</h2>
+        <p style="color: var(--color-text-muted); margin: 1rem 0 2rem;">Tento produkt neexistuje nebo byl odstraněn.</p>
+        <a href="index.html#gallery" class="btn btn-primary">← Zpět do galerie</a>
+      `;
+    }
+  </script>
+</body>
+</html>
